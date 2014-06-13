@@ -3,7 +3,8 @@ var gulp = require('gulp');
 var less = require('gulp-less'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    zip = require('gulp-zip');
 
 gulp.task('build-css', function() {
   return gulp.src('less/bootstrap.less')
@@ -31,3 +32,9 @@ gulp.task('build-fonts', function() {
 });
 
 gulp.task('build', ['build-js', 'build-css', 'build-fonts']);
+
+gulp.task('pack', ['build'], function() {
+  gulp.src('dist/**')
+    .pipe(zip('bootstrap.zip'))
+    .pipe(gulp.dest('./build'));
+});
