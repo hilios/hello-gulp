@@ -38,3 +38,8 @@ gulp.task('pack', ['build'], function() {
     .pipe(zip('bootstrap.zip'))
     .pipe(gulp.dest('./build'));
 });
+
+gulp.task('default', function() {
+  gulp.watch('js/**/*.js', ['build-js']);
+  gulp.watch('less/**/*.less', ['build-css']);
+});
