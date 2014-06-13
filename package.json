@@ -2,5 +2,6 @@
   "name": "hello-gulp",
   "version": "0.0.1",
   "devDependencies": {
+    "gulp": "~3.7"
   }
 }
