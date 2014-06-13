@@ -2,6 +2,8 @@
   "name": "hello-gulp",
   "version": "0.0.1",
   "devDependencies": {
-    "gulp": "~3.7"
+    "gulp": "~3.7",
+    "gulp-concat": "~2.2",
+    "gulp-less": "~1.2"
   }
 }
