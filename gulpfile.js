@@ -25,4 +25,9 @@ gulp.task('build-js', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('build', ['build-js', 'build-css']);
+gulp.task('build-fonts', function() {
+  return gulp.src('fonts/**/*')
+    .pipe(gulp.dest('./dist/fonts'));
+});
+
+gulp.task('build', ['build-js', 'build-css', 'build-fonts']);
