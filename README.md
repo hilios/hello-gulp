@@ -26,7 +26,7 @@ Step-by-step
 
 This tutorial is splitted into small steps that can be followed by the git tags:
 
-```
+```sh
 $ git tag
 0-init
 1-install
@@ -36,18 +36,19 @@ $ git tag
 5-copy-assets
 6-zip
 7-watcher
+8-gruntfile
 ```
 
 To get started checkout to the `0-init` tag:
 
-```
+```sh
 git checkout 0-init
 git clean -dfx
 ```
 
 Follow the changes to the files using `git diff` output:
 
-```
+```diff
 $ git diff 0-init 1-install
 diff --git a/gulpfile.js b/gulpfile.js
 index e69de29..f42a67a 100644
@@ -72,7 +73,15 @@ The only files that change are `gulpfile.js` and `package.json`, so keep an eye 
 
 Please notice that every time the `package.json` changes you will need to execute to fetch the dependecies with `npm`:
 
-```
+```sh
 # Run every time package.json changes
 npm install
+```
+
+#### Hint
+
+To make easier to spot the diffs add some color to your `git` config:
+
+```
+git config --global color.diff "auto"
 ```
