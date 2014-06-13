@@ -4,6 +4,8 @@
   "devDependencies": {
     "gulp": "~3.7",
     "gulp-concat": "~2.2",
-    "gulp-less": "~1.2"
+    "gulp-less": "~1.2",
+    "gulp-rename": "~1.2",
+    "gulp-uglify": "~0.3"
   }
 }
